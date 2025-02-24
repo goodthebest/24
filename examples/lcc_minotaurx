@@ -1,0 +1,60 @@
+            "id": "lccminotaurx",
+            "enabled": true,
+            "coin": "litecoin-cash-minotaurx",
+            "address": "CX4YR9HVNTHFENBM5arkFASVjSMLc91z2Q",
+            "GBTArgs": [{
+            "powalgo": "minotaurx",
+            "rules": [
+                "segwit",
+                "minotaurx_and_hive_1_2"
+            ]
+        }],
+            "rewardRecipients": [
+                {
+                    "address": "CX4YR9HVNTHFENBM5arkFASVjSMLc91z2Q",
+                    "percentage": 0.78
+                }
+            ],
+            "blockRefreshInterval": 500,
+            "jobRebroadcastTimeout": 10,
+            "clientConnectionTimeout": 600,
+            "banning": {
+                "enabled": true,
+                "time": 600,
+                "invalidPercent": 50,
+                "checkThreshold": 50
+            },
+            "ports": {
+                "4678": {
+                   "listenAddress":"*",
+                    "name": "CPU Mining",
+                    "difficulty": 0.0000128,
+                    "tls": false,
+                    "tlsPfxFile": null,
+                    "varDiff": {
+                        "minDiff": 0.0000128,
+                        "maxDiff": null,
+                        "targetTime": 15,
+                        "retargetTime": 5,
+                        "variancePercent": 25,
+                        "maxDelta": null
+                    }
+                }
+            },
+            "daemons": [
+                {
+                    "host": "127.0.0.1",
+                    "port": coin wallet rpc port,
+                    "user": "mcorerpc",
+                    "password": "your coin wallet password"
+                }
+            ],
+            "paymentProcessing": {
+                "enabled": true,
+                "minimumPayment": 200,
+                "payoutScheme": "PROP",
+                "payoutSchemeConfig": {
+                    "factor": 2.0
+                }
+            }
+        },
