@@ -22,7 +22,7 @@ public class BitcoinPoolConfigExtra
 
     /// <summary>
     /// Set to true to fall back to multiple sendtoaddress RPC calls for payments
-    /// </summary>
+    /// </summary>FMini
     public bool HasBrokenSendMany { get; set; } = false;
 
     /// <summary>
