@@ -69,6 +69,8 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "shake/shake.h"
 #include "memehash.h"
 #include "megabtx.h"
+#include "xelisv2.h"
+#include "x11kvs.h"
 
 #ifdef _WIN32
 #include "blake2/ref/blake2.h"
@@ -92,6 +94,11 @@ extern "C" MODULE_API void scrypt_export(const char* input, char* output, uint32
 extern "C" MODULE_API void quark_export(const char* input, char* output, uint32_t input_len)
 {
 	quark_hash(input, output, input_len);
+}
+
+extern "C" MODULE_API void xelisv2_pepew_export(const char* input, char* output, uint32_t input_len)
+{
+    xelisv2_pepew_hash(input, output, input_len);
 }
 
 extern "C" MODULE_API void sha256csm_export(const char* input, char* output, uint32_t input_len)
@@ -152,6 +159,11 @@ extern "C" MODULE_API void x11_export(const char* input, char* output, uint32_t 
 extern "C" MODULE_API void x11gost_export(const char *input, char *output, uint32_t input_len)
 {
 	x11gost_hash(input, output, input_len);
+}
+
+extern "C" MODULE_API void x11kvs_export(const char *input, char *output, uint32_t input_len)
+{
+	x11kvs_hash(input, output, input_len);
 }
 
 extern "C" MODULE_API void x13_export(const char* input, char* output, uint32_t input_len)

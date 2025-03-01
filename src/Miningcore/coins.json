@@ -744,6 +744,35 @@
         "explorerTxLink": "https://explorer.cpuchain.org/#/tx/{0}",
         "explorerAccountLink": "https://explorer.cpuchain.org/#/address/{0}"
     },
+    "dadarpay": {
+        "name": "Dadar Pay",
+        "symbol": "DDR",
+        "family": "bitcoin",
+        "website": "https://dadar.xyz/",
+        "github": "https://github.com/dadarpay/DDR",
+        "market": "https://exchange.spectra.cash/#/market/DEX.DDR_DEX.USDT",
+        "twitter": "https://x.com/CoinDadar",
+        "telegram": "",
+        "discord": "https://discord.gg/R32FTyKdXC",
+        "coinbaseHasher": {
+            "hash": "sha256d"
+        },
+        "headerHasher": {
+            "hash": "x11kvs"
+        },
+        "blockHasher": {
+            "hash": "reverse",
+            "args": [
+                {
+                    "hash": "x11kvs"
+                }
+            ]
+        },
+        "hasMasterNodes": true,
+        "explorerBlockLink": "https://blocks.dadar.xyz/block/$hash$",
+        "explorerTxLink": "https://blocks.dadar.xyz/tx/{0}",
+        "explorerAccountLink": "https://blocks.dadar.xyz/address/{0}"
+    },
     "danecoin": {
         "name": "Danecoin",
         "canonicalName": "Danecoin",
@@ -2046,7 +2075,7 @@
     },
     "maza": {
         "name": "Maza",
-        "canonicalName": "Mazacoin no ASICBoost",
+        "canonicalName": "Mazacoin",
         "symbol": "MAZA",
         "family": "bitcoin",
         "website": "http://www.mazacoin.org/",
@@ -2074,7 +2103,7 @@
     },
     "maza-minotaurx": {
         "name": "Maza",
-        "canonicalName": "Mazacoin Minotaurx",
+        "canonicalName": "Mazacoin",
         "symbol": "MAZA",
         "family": "bitcoin",
         "website": "http://www.mazacoin.org/",
@@ -2099,6 +2128,34 @@
         "explorerBlockLink": "https://mazacha.in/block/$hash$",
         "explorerTxLink": "https://mazacha.in/tx/{0}",
         "explorerAccountLink": "https://mazacha.in/address/{0}"
+    },
+    "microbitcoin": {
+        "name": "MicroBitcoin",
+        "canonicalName": "MicroBitcoin",
+        "symbol": "MBC",
+        "family": "bitcoin",
+        "website": "https://microbitcoin.org/",
+        "twitter": "https://twitter.com/MicroBitcoinOrg",
+        "telegram": "",
+        "discord": "https://discordapp.com/invite/JuRrekx",
+        "coinbaseHasher": {
+            "hash": "sha256d"
+        },
+        "headerHasher": {
+            "hash": "power2b"
+        },
+        "blockHasher": {
+            "hash": "reverse",
+            "args": [
+                {
+                    "hash": "blake2b"
+                }
+            ]
+        },
+        "shareMultiplier": 65536,
+        "explorerBlockLink": "https://microbitcoinorg.github.io/explorer/#/block/$hash$",
+        "explorerTxLink": "https://microbitcoinorg.github.io/explorer/#/transaction/{0}",
+        "explorerAccountLink": "https://microbitcoinorg.github.io/explorer/#/address/{0}"
     },
     "mincoin": {
         "name": "Mincoin",
@@ -2404,27 +2461,28 @@
         "canonicalName": "PepePow",
         "symbol": "PEPEW",
         "family": "bitcoin",
-        "website": "https://pepecore.com/",
-        "market": "",
-        "twitter": "https://twitter.com/pepepow_coin",
-        "telegram": "",
-        "discord": "https://discord.com/invite/jJgV73w8Zs",
+        "website": "https://pepepow.org/",
+        "market": "https://www.coingecko.com/en/coins/pepepow",
+        "twitter": "https://twitter.com/PEPEWCommunity",
+        "telegram": "https://t.me/pepewcommunity",
+        "discord": "https://discord.com/invite/sJgDVRkBcq",
         "coinbaseHasher": {
             "hash": "sha256d"
         },
         "headerHasher": {
-            "hash": "memehash"
+            "hash": "xelisv2-pepew"
         },
         "blockHasher": {
             "hash": "reverse",
             "args": [
                 {
-                    "hash": "memehash"
+                    "hash": "xelisv2-pepew"
                 }
             ]
         },
         "hasMasterNodes": true,
         "hasFoundation": true,
+        "shareMultiplier": 65536,
         "explorerBlockLink": "https://explorer.pepepow.org/block/$hash$",
         "explorerTxLink": "https://explorer.pepepow.org/tx/{0}",
         "explorerAccountLink": "https://explorer.pepepow.org/address/{0}"
@@ -5771,6 +5829,7 @@
         "subAddressPrefix": 2159341,
         "subAddressPrefixTestnet": 3221357,
         "subAddressPrefixStagenet": 616429,
+        "coinbaseMinConfimations": 18,
         "explorerBlockLink": "https://explorer.gntl.cash/block/$hash$",
         "explorerTxLink": "https://explorer.gntl.cash/tx/{0}"
     },
@@ -5823,6 +5882,7 @@
         "subAddressPrefix": 961249,
         "subAddressPrefixTestnet": 18274,
         "subAddressPrefixStagenet": 2096098,
+        "coinbaseMinConfimations": 18,
         "explorerBlockLink": "https://explorer.morelonetwork.pl/block/$hash$",
         "explorerTxLink": "https://explorer.morelonetwork.pl/tx/{0}"
     },
