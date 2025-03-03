@@ -14,7 +14,7 @@ public unsafe class KeccakC : IHashAlgorithm
         {
             fixed (byte* output = result)
             {
-                Multihash.kezzak(input, output, (uint) data.Length);
+                Multihash.kezzakc(input, output, (uint) data.Length);
             }
         }
     }
