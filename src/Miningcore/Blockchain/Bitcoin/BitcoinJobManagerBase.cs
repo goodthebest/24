@@ -473,7 +473,7 @@ public abstract class BitcoinJobManagerBase<TJob> : JobManagerBase<TJob>
 
         // chain detection
         if(!hasLegacyDaemon)
-            network = (blockchainInfoResponse.Chain.ToLower() == "nexa") ? Network.Main : Network.GetNetwork(blockchainInfoResponse.Chain.ToLower());
+            network = Network.Main : Network.GetNetwork(blockchainInfoResponse.Chain.ToLower());
         else
             network = daemonInfoResponse.Testnet ? Network.TestNet : Network.Main;
 
@@ -489,7 +489,7 @@ public abstract class BitcoinJobManagerBase<TJob> : JobManagerBase<TJob>
         forcePoolAddressDestinationWithPubKey = poolConfig.Template is BitcoinTemplate {ForcePoolAddressDestinationWithPubKey: true};
 
         // Create pool address script from response
-        if(!isPoS && !forcePoolAddressDestinationWithPubKey)
+        if(!isPoS )
         {
             if(extraPoolConfig != null && extraPoolConfig.AddressType != BitcoinAddressType.Legacy)
                 logger.Info(()=> $"Interpreting pool address {poolConfig.Address} as type {extraPoolConfig?.AddressType.ToString()}");
